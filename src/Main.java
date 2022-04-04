@@ -17,23 +17,29 @@ import java.util.Scanner;
 
 public class Main
 {
-    private static Stack<String> lineStack = new Stack<>();
+    private static final Stack<String> lineStack = new Stack<>();
 
     public static void main(String[] args)
     {
-        String input = "";
+        String input;
         Scanner reader = new Scanner(System.in);
 
+
+        // Greeting
         System.out.println("[------------------------------------]\n              Welcome to \n          Palindrome Checker\n[------------------------------------]");
         System.out.print(" Enter a String or Type [-1] to Quit \n Input? ");
         input = reader.nextLine();
 
+
+        // Checks to see if Empty String is Imported
         while(input.trim().isEmpty())
         {
             System.out.print("INFO : Invalid Input \n Enter a String or Type [-1] to Quit \n Input? ");
             input = reader.nextLine();
         }
 
+
+        // Run Loop again until -1, is entered
         while(!(input.equals("-1")))
         {
             for (int i = 0; i < input.length(); i++)
@@ -47,6 +53,9 @@ public class Main
             System.out.print(" Input? ");
             input = reader.nextLine();
         }
+
+
+        // Exit
         System.out.println("\n Thanks for using Palindrome Checker, have a great day!");
     }
 
@@ -65,12 +74,9 @@ public class Main
         String temp = "";
 
         while(!lineStack.empty())
-            temp += lineStack.pop();
+            temp = temp.concat(lineStack.pop());
 
 
-        if(temp.equals(input))
-            return true;
-
-        return false;
+        return temp.equalsIgnoreCase(input);
     }
 }

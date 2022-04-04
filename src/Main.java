@@ -24,9 +24,15 @@ public class Main
         String input = "";
         Scanner reader = new Scanner(System.in);
 
-        System.out.println("[------------------------------------]\n               Welcome to \n           Palindrome Checker\n[------------------------------------]");
+        System.out.println("[------------------------------------]\n              Welcome to \n          Palindrome Checker\n[------------------------------------]");
         System.out.print(" Enter a String or Type [-1] to Quit \n Input? ");
         input = reader.nextLine();
+
+        while(input.trim().isEmpty())
+        {
+            System.out.print("INFO : Invalid Input \n Enter a String or Type [-1] to Quit \n Input? ");
+            input = reader.nextLine();
+        }
 
         while(!(input.equals("-1")))
         {

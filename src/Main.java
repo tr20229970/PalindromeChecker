@@ -10,19 +10,23 @@ public class Main
         String input = "";
         Scanner reader = new Scanner(System.in);
 
-
-        System.out.print("Enter a Input?");
+        System.out.println("[------------------------------------]\n               Welcome to \n           Palindrome Checker\n[------------------------------------]");
+        System.out.print(" Enter a String or Type [-1] to Quit \n Input? ");
         input = reader.nextLine();
 
-        for(int i = 0; i < input.length(); i++)
+        while(!(input.equals("-1")))
         {
-            lineStack.push(input.substring(i, i + 1));
-        }
+            for (int i = 0; i < input.length(); i++)
+                lineStack.push(input.substring(i, i + 1));
 
-        if(check(input))
-            System.out.println("That String is a Palindrome!");
-        else
-            System.out.println("That String is not a Palindrome!");
+            if (check(input))
+                System.out.println("That String is a valid Palindrome!    ✅");
+            else
+                System.out.println("That String is a invalid Palindrome!  ❌");
+
+            System.out.print(" Input? ");
+            input = reader.nextLine();
+        }
     }
 
     private static boolean check(String input)

@@ -3,7 +3,7 @@ import java.util.Scanner;
 
 public class Main
 {
-    private static Stack<String> lineStack = new Stack<String>();
+    private static Stack<String> lineStack = new Stack<>();
 
     public static void main(String[] args)
     {
@@ -27,6 +27,7 @@ public class Main
             System.out.print(" Input? ");
             input = reader.nextLine();
         }
+        System.out.println("\n Thanks for using Palindrome Checker, have a great day!");
     }
 
     private static boolean check(String input)

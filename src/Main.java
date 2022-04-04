@@ -1,3 +1,17 @@
+
+    /*
+    [-----------------------------------------------------]
+    | @P-Name Palindrome Checker                          |
+    | @File Main.java                @By Tyler Romanowski |
+    | @Created  3.30.22              @Last 4.4.22         |
+    | @Comment -  The Purpose of this program is to check |
+    | to see if a string reversed is the same as the      |
+    | original string. This program request user input,   |
+    | and the present the status of the String whether    |
+    | it is a Palindrome, or not                          |
+    [-----------------------------------------------------]
+     */
+
 import java.util.Stack;
 import java.util.Scanner;
 
@@ -30,6 +44,16 @@ public class Main
         System.out.println("\n Thanks for using Palindrome Checker, have a great day!");
     }
 
+    /*
+    [----------------------------------------]
+    | @Method check                          |
+    | @Args String Input                     |
+    | @Post - Returns boolean                |
+    | @Comment - Returns true if the reverse |
+    |String is the same as the original      |
+    |string else false                       |
+    [----------------------------------------]
+     */
     private static boolean check(String input)
     {
         String temp = "";

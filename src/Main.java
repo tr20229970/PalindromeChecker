@@ -59,6 +59,7 @@ public class Main
         System.out.println("\n Thanks for using Palindrome Checker, have a great day!");
     }
 
+
     /*
     [----------------------------------------]
     | @Method check                          |
